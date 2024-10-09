@@ -1,0 +1,7 @@
+C:\Users\danil\Source\Repos\Information-systems-design\bin\Debug\Моря.exe.config
+C:\Users\danil\Source\Repos\Information-systems-design\bin\Debug\Моря.exe
+C:\Users\danil\Source\Repos\Information-systems-design\bin\Debug\Моря.pdb
+C:\Users\danil\Source\Repos\Information-systems-design\obj\Debug\Моря.csproj.AssemblyReference.cache
+C:\Users\danil\Source\Repos\Information-systems-design\obj\Debug\Моря.csproj.CoreCompileInputs.cache
+C:\Users\danil\Source\Repos\Information-systems-design\obj\Debug\Моря.exe
+C:\Users\danil\Source\Repos\Information-systems-design\obj\Debug\Моря.pdb

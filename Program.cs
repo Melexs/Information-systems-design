@@ -6,50 +6,36 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using static Моря.SeaItem;
+
 
 namespace Моря
 {
     internal class Seas
     {
-        static void Main()
+        public static void Main()
         {
-            string input = "'Тихий океан': 3970.5:  35.2";
-            Item item = Item.Read(input);
+            var inputs = new List<string>
+            {
+                "'Тихий океан': 390,5: 35,2",
+                "'Флора Красные водоросли': 50,3: 30,5: Ламинария: 1000",
+                "'Фауна Морские звезды': 20,6: 35,2: Asteroidea: 500"
+            };
 
-            
+            var seaItems = new List<SeaItem>();
+            foreach (var input in inputs)
+            {
+                var seaItem = SeaItemFactory.Create(input);
+                seaItems.Add(seaItem);
+            }
 
-            Console.WriteLine($"Название: {item.Name}");
-            Console.WriteLine($"Глубина: {item.Depth}");
-            Console.WriteLine($"Соленость: {item.Salinity}");
+            foreach (var seaItem in seaItems)
+            {
+                seaItem.PrintDetails();
+            }
+
             Console.ReadKey();
         }
     }
-
-    class Item
-    {
-        public string Name { get; set; }
-        public double Depth { get; set; }
-        public float Salinity { get; set; }
-
-        public static Item Read(string input)
-        {
-            string[] parts = input.Split(new[] { ':' }, 3);
-
-
-            string name = parts[0];
-            double depth =Convert.ToDouble(parts[1], CultureInfo.InvariantCulture);
-            float salinity = float.Parse(parts[2], CultureInfo.InvariantCulture);
-
-            return new Item
-            {
-                Name = name,
-                Depth = depth,
-                Salinity = salinity
-            };
-        }
-    }
-
 }
-
-
 
